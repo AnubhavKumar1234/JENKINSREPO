@@ -1,7 +1,6 @@
 package Practicejenkins_Framework1;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -21,6 +20,7 @@ public class CreateCampaignTest
 		Properties p=new Properties();
 		p.load(fis);
 		String Url = p.getProperty("url");
+		driver.get(Url);
 		System.out.println(Url);
 		System.out.println("Campaign created");
 
